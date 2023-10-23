@@ -1,0 +1,283 @@
+/*resete de padrões CSS*/
+/*seletor universal*/
+*{
+   margin: 0;
+   /*reseta o valor padrão do margin do navegador*/
+   padding: 0;
+   /*reseta o padding do navegador*/
+   box-sizing: border-box;
+   /*a medida do tamanho da caixa, pra que seja medida através da borda*/
+
+}
+
+
+
+
+
+body{
+    /*
+    background-image: url(./assets/bg-mobile.jpg);
+    /*chamou o seletor da tag body e declarou que irá usar
+    uma imagem de fundo no seguinte url()*/
+    /*background-repeat: no-repeat;
+    /*a imagem de fundo por padrão ao comprimento ela repete
+    usando o bg repeat: no-repeat ela não faz mais isso*/
+    /*background-position: top center;
+    /*para centralizar a imagem que ficou no canto*/
+    /*centralizando de igual modo ao eixo y(de cima pra baixo)*/
+    /*background-size: cover;
+    /*tamanho do background, com a opção cover, cobre todo o espaço visivel do body*/
+
+    /*agrupa todas as informações acima: short-hand(atalho)
+    na ordem (color,image) , repeat, position e o /size que é cobrir */
+    background: var(--bg-url) no-repeat top center/cover;
+
+}
+
+/*seletor universal é o "*" informando que todo os elementos dentro do body recebe a fonte*/
+body *{
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+
+}
+
+
+
+/*seletor de ID criado para a div*/
+#container{
+     
+     /*criando uma borda com tamanho, estilo e cor para tornar visivel*/
+     /*altura do container adaptável não definida*/
+     width: 360px;
+     /*largura do container*/
+     
+     
+     /* margin-right: auto ; */
+     /*distancia desse container(caixa) para o body à direita*/
+     /* margin-left: auto; */
+     /*distancia desse container(caixa) para o body à esquerda*/
+     /*trocando por uma só: */
+      /*funciona apenas com a largura*/
+     /* padding: 100px; */
+     /*vai ignorar o width, com o box-sizing border box mantem width e padding juntos*/
+     /*é possível fazer isso de forma mais fácil na mesma propiedade na sequencia top,right,bottom,
+     left(horario)*/
+     /*com duas ele irá aplicar encima e embaixo e nas laterais*/
+     margin: 56px auto 0;
+     /*com três elementos ele irá fazer encima, nas laterais(auto) e embaixo(0)*/
+     padding: 0 24px;
+     /*padding encima e embaixo 0 e nas laterais 24px*/
+    }
+
+/*neste caso procura a tag imagem que está dentro do container com id #profile*/
+#profile img{
+     width:112px;
+     /*largura da imagem*/
+     /*margin:auto; não colocaria minha imagem ao centro*/
+     /*image por padrão é um elemento inline onde não consigo aplicar margin auto 
+     (e div um elemento block)*/
+
+     /*mudando o display para block permite que o margin auto funcione*/
+}
+
+#profile p{
+    font-weight: 500;
+    /*peso da fonte "bold" o negrito da fonte*/
+    font-size: 16px;
+    /*tamanho da fonte padrão do navegador*/
+    line-height: 24px;
+    /*altura da linha*/
+    margin-top: 8px;
+
+}
+
+/*outra forma de fazer*/
+
+ #profile{ 
+    text-align: center;
+    padding: 24px; 
+    /*aplica em todos os lados da div profile*/
+    
+   
+}
+/*pois se o elemento permanecer display inline ele apenas irá centralizar referenciado o pai e usando
+text-align: center*/
+
+#switch{
+    position: relative;
+    /*relativiz o position absolute do botão para dentro da borda da div switch*/
+    width: 64px;
+    margin: 4px auto;
+}
+
+.light #switch button{
+right: 0;
+left: initial;
+/*atribui 0 a direita do botão e reseta o valor de left*/
+
+
+}
+
+
+/*switch:*/
+#switch button{
+    width: 32px;
+    height: 32px;
+    /*tamanho do button*/
+    background: white var(--switch-bg) no-repeat center; 
+    /*no-repear não repete a imagem no background */  
+    border: 0;
+    /*"tamanho" da borda como está 0 ela não existe*/
+    border-radius: 50%;
+
+
+
+    position: absolute;
+    /*usando o conceito de layer para sobrepor o position dentro da track*/
+    /*position absolute automaticamente sobrepõe*/
+    z-index: 1;
+    /*com o z-index define o layer(ou andar) que vai subir o elemento*/
+    left: 0;
+    top: 50%;
+    transform:translateY(-50%);
+    /*centralizando botão dentro da borda da div switch*/
+    /*como o position da div está relative com o transform -50% coloca metade para fora da caixa
+    com o top de mais 50% ajusta colocando ao meio*/
+    
+
+}
+#switch span{
+    display: block;
+    /*por padrão span tem display inline e não aceita largura, tranforma em display block*/
+    width: 64px;
+    height: 24px;
+    /*define largura e altura*/
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    /*seta elementos background e borda com as cores das variaveis ja tratadas*/
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    /*define o blur com webkit para acessibilidade de todos os navegadores ao estilo */
+    border-radius: 9999px;
+
+}
+
+
+/*lista de Links: */
+ul{
+    list-style: none;
+    /*tira os pontinhos padrões da lista desordenada*/
+    display: flex;
+    /*vai por um elemento do ul ao lado do outro de forma flex*/
+    flex-direction: column;
+    /*ajusta a direção do flex para coluna*/
+    gap: 16px;
+    /*espaço entre os elementos*/
+    padding: 24px 0;
+
+}
+
+
+ul li a{
+    
+    display: flex;
+    /*faz com que os elementos fiquem um ao lado do outro de uma maneira flexivel,
+    de uma maneira que se encaixa colocando e tirando elementos*/
+    justify-content: center;
+    /*com o display flex permite que o justify center alinha os link
+     da lista ao centro da caixa*/
+     /*justify alinha em relação aos lados*/
+     padding: 16px 24px;
+     align-items: center;
+     /*align alinha  de cima pra baixo*/
+     background: var(--surface-color);
+     border: 1px solid var(--stroke-color);
+     /*borda de 1px do estilo solido, rgba funciona: red, green, blue de 0 a 255, e a transparencia
+     (de 0 até 1)*/
+     border-radius: 8px;
+     backdrop-filter: blur(4px);
+     -webkit-backdrop-filter: blur(4px);
+     /*vai embassar o elemento*/
+     /*usa o -webkit- para recurso ser ultilizado em alguns browsers que ainda necessitam*/
+     text-decoration: none;
+     /*para tirar a linha do link*/
+     font-weight: 500;
+     transition: background 0.5s;
+}
+/*pseudo-selector(sudo)*/
+ul li a:hover{
+    background-color: var(--surface-color-hover);
+    border: 1.5px solid var(--text-color);
+    
+}
+/*links sociais*/
+#social-icons{
+
+    display: flex;
+    /*display flex para habilitar: */
+    padding: 24px 0;
+    /*padding dos elementos em ralção a borda*/
+    font-size: 24px;
+    /*mudando todo o tamanho dos elementos dentro da caixa*/
+    justify-content: center;
+    /*display flex habilita justify center dos itens dentro da caixa no centro(após estarem flex)*/
+}
+
+
+/*alinhando o icone ao centro da bolinha de bg*/
+#social-icons a{
+    display: flex;
+    /*dispoem um ao lado do outro no estilo flexivel*/
+    align-items: center;
+    /*desbloqueia alinhar ao centro dentro desse display flex */
+    justify-content: center;
+    /*desbloqueia alinhar ao centro dentro desse display flex em direções diferentes do align items*/
+    transition: 0.2s;
+
+    padding: 16px;
+    border-radius: 50%;
+    /*só aparece após o hove porém já prédefinido 50%*/
+}
+
+
+
+
+/*criando o efeito passar o mouse encima do icone marcar ao redor com uma bolinha transparente*/
+
+
+
+#social-icons a:hover{
+    background-color: var(--highlight-color);
+    /*criar o background transparente ao passar o mouse*/
+}
+
+footer{
+    padding: 24px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/*criando variáveis para o html*/
+
+/*pseudo selector root(pode ser html também)*/
+:root{
+    /*definindo uma variavel para cor de texto */
+   --text-color:  white;
+   --bg-url:  url(assets/eva-dark\ mode.jpg);
+   --stroke-color: rgba(255, 255, 255, 0.5);
+   --surface-color: rgba(255 , 255 , 255 , 0.1);
+   --surface-color-hover:rgba(255, 255, 255, 0.05);
+   --highlight-color:rgba(255, 255, 255, 0.2);
+   --switch-bg: url(assets/moon-stars.svg)
+
+}
+
+.light{
+    --text-color: black;
+    --bg-url: url(assets/eva-light.jpg);
+    --stroke-color: rgba(0 , 0 , 0 , 0.5);
+    --surface-color: rgba(0 , 0 , 0 , 0.05);
+    --surface-color-hover:rgba(0 ,0 , 0, 0.05); 
+    --highlight-color:rgba(0 ,0 , 0, 0.1);
+    --switch-bg: url(assets/sun.svg)
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--iniciando configuração light mode / dark mod-->
+<html lang="pt-br" class="light">
+<!--tags filhas, nodes-->
+<!--head é responsável por ajustar configurações do documaneto
+que não são visiveis para quem acessa-->
+<head>
+<!--Link da fonte Inter-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <!--conjunto de caracteres-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--compatibilidade com navegadores mais antigos-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--viewport é a parte visivel do site , esse meta se adapta ao tamanho do device-->
+    <title> Projeto rocketseat</title>
+    <link rel="stylesheet" href="Style.css">
+    <!--tag faz um ralacionamento com um arquivo do tipo stylesheet, na href= style.css-->
+</head>
+<body>
+    <!--uma div para o container que vai possuir os elemtnso-->
+    <div id="container">
+        <!--uma div profile para foto e nome-->
+        <div id="profile">
+            <img src="assets/avatar-eu.png" alt="Foto de Heitor Alves lindão com moletom cinza">
+            <!--pode ser em qualquer lugar no mundo, estou apontando para minha pasta-->
+            <!--alt descrever imagem-->
+            <p>@Hogbackt</p>
+        </div>       
+        <!--com o metodo onclick dentro da div switch , ativa a função toggleMode()-->
+        <div id="switch" onclick="toggleMode()">
+            <!--criando botão de switch lght and dark mode (com botão ea track que corresponde ao span)-->
+                <button></button>
+                <span></span>
+        </div>
+        <ul>
+            <li>
+                <a href="https://github.com/Heitors09" target="_blank">Meu Github</a>
+            <!--usando o target="_blank" meu link irá abrir outra guia e não sair da atual-->
+            </li>
+            <li>
+                <a href="#">Meu Linkedin</a>
+            </li>
+            <li>
+                <a href="https://twitter.com/Hogbackt" target="_blank">Meu Twitter</a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/alvestor_/" target="_blank">Meu Instagram</a>
+            </li>
+        </ul>
+        <!--poderia usar de igual modo a tag <ol> a diferença é que seria uma lista ordenada-->
+        <div id="social-icons">
+            <a href="#"><ion-icon name="logo-discord"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-medium"></ion-icon</a>
+            <a href="#"><ion-icon name="rocket-outline"></ion-icon></a>
+            
+        </div>
+        <footer>-projeto agrupador de links-</footer>
+    </div>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<!--linkando ao script da função onclick-->
+<script src="script.js"></script>
+</html>
+<!--root element-->
