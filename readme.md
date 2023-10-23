@@ -1,6 +1,6 @@
 <h1>Projeto agrupador de Links</h1>
 
-<p>Projeto que agrupa em uma mesma visão o acesso a diversos Links pessoais com o propósito de ser um facilitador de divulgação</p>
+<p>Projeto que agrupa em uma mesma visão o acesso a diversos Links pessoais com o propósito de ser um facilitador de divulgação, "cartão de visitas"</p>
 
 <h2>Tecnologias: </h2>
 <ul>
