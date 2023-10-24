@@ -283,3 +283,12 @@ footer{
     --highlight-color:rgba(0 ,0 , 0, 0.1);
     --switch-bg: url(assets/sun.svg)
 }
+
+/*media queries*/
+/*atrule */
+/*a rule é que a media de sua largura minima que é 700px pra cima executa as regras a seguir*/
+/* @media(min-width:700px){
+   :root{
+    --bg-url:()
+   }
+} */
