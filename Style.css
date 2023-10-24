@@ -48,7 +48,9 @@ body *{
      
      /*criando uma borda com tamanho, estilo e cor para tornar visivel*/
      /*altura do container adaptável não definida*/
-     width: 360px;
+     width: 100%;
+     /*ocupa 100% até o máximo de 588px*/
+     max-width: 588px;
      /*largura do container*/
      
      
@@ -105,7 +107,7 @@ text-align: center*/
 
 #switch{
     position: relative;
-    /*relativiz o position absolute do botão para dentro da borda da div switch*/
+    /*relativiza o position absolute do botão para dentro da borda da div switch*/
     width: 64px;
     margin: 4px auto;
 }
@@ -143,7 +145,7 @@ left: initial;
     /*centralizando botão dentro da borda da div switch*/
     /*como o position da div está relative com o transform -50% coloca metade para fora da caixa
     com o top de mais 50% ajusta colocando ao meio*/
-    
+   
 
 }
 #switch span{
