@@ -113,9 +113,9 @@ text-align: center*/
 }
 
 .light #switch button{
-right: 0;
-left: initial;
-/*atribui 0 a direita do botão e reseta o valor de left*/
+animation: slide-button 0.6s forwards;
+/*usa a propiedade animation com o nome da animação criada(keyframe) e o tempo de transição
+acrescenta forwards para valor recebido no animation permanecer(50%) e não voltar ao inicio*/
 
 
 }
@@ -145,9 +145,17 @@ left: initial;
     /*centralizando botão dentro da borda da div switch*/
     /*como o position da div está relative com o transform -50% coloca metade para fora da caixa
     com o top de mais 50% ajusta colocando ao meio*/
+    animation: slide-button-back 0.6s ;
    
 
 }
+
+
+#switch button:hover{
+    cursor: pointer;
+    outline: 8px solid var(--highlight-color);
+}
+
 #switch span{
     display: block;
     /*por padrão span tem display inline e não aceita largura, tranforma em display block*/
@@ -291,4 +299,39 @@ footer{
    :root{
     --bg-url:()
    }
+
+   .light{
+      
+      --bg-url()
+   }
+
 } */
+
+
+/*animações CSS(animation)*/
+/*atrule usada para definir animações:*/
+/*se coloca a @keyframes após o nome da animação*/
+/*ida do botão*/
+@keyframes slide-button{
+    /*onde começa*/
+    from{
+        left: 0;
+    }
+    to{
+        left: 50%
+    }
+}
+
+/*volta*/
+
+@keyframes slide-button-back{
+       from{
+        left: 50%;
+       }
+
+       to{
+        left: 0
+       }
+
+
+}
